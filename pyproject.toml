@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "sentence_transformers"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sembed"
+version = "0.1"
+authors = [{name="Matthijs Westera", email="m.westera@hum.leidenuniv.nl"}]
+description = "Simple command-line utility wrapper around sentence-transformers."
+readme = "README.md"
+requires-python = ">=3.7"
+
+
+[project.scripts]
+sembed = "sembed:main"
+
+[project.urls]
+"Homepage" = "https://github.com/mwestera/sembed"
+"Bug Tracker" = "https://github.com/mwestera/sembed/issues"
