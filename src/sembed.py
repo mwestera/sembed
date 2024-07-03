@@ -11,7 +11,10 @@ import csv
 Compute sentence embeddings for lines in input, writing them as .csv output.
 
 Smaller model (English): paraphrase-MiniLM-L6-v2
+Dutch: NetherlandsForensicInstitute/robbert-2022-dutch-sentence-transformers
 """
+
+# TODO: Add language argument instead of model.
 
 def main():
     args = parse_args()
