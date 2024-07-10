@@ -31,9 +31,12 @@ def main():
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Script to compute word/sentence embeddings.')
-    parser.add_argument('sentence', nargs='?', type=str, default=None, help='Sentence to process')
+    parser.add_argument('sentences', nargs='?', type=argparse.FileType('r'), default=sys.stdin, help='Sentence to process, default stdin.')
     parser.add_argument('--model', type=str, default='distiluse-base-multilingual-cased-v1', help='Embedding model to use')
     args = parser.parse_args()
+
+    if args.sentences == '-':
+        args.sentences = sys.stdin
     return args
 
 
