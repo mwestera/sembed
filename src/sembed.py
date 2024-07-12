@@ -20,11 +20,7 @@ def main():
     args = parse_args()
     writer = csv.writer(sys.stdout)
     model = SentenceTransformer(args.model)
-    if args.sentence:
-        sentences = [args.sentence]
-    else:
-        sentences = sys.stdin
-    for line in sentences:
+    for line in arg.sentences:
         emb = model.encode(line.strip(), show_progress_bar=False)
         writer.writerow(emb)
 
