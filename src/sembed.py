@@ -15,6 +15,7 @@ Dutch: NetherlandsForensicInstitute/robbert-2022-dutch-sentence-transformers
 """
 
 # TODO: Add language argument instead of model.
+# TODO: Where do cached models go?
 
 def main():
     args = parse_args()
